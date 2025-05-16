@@ -7,14 +7,14 @@
 
 
 
-# Team Charter (with User Stories)
+Team Charter Template (with User Stories)
 1. Project Overview
 
     Project Name: The Great Outdoors Website
-    Project Description: (TBD)
+    Project Description: Create a website where all 
   
     Project Timeline: (TBD)
-Interview client (05/08/2025)  
+Interview client (05/15/2025)  
 
     Project Goals: (TBD)
         Goal 1:
@@ -34,8 +34,8 @@ Interview client (05/08/2025)
     Role:
 
     Name: Frank Echols
-    Strengths:
-    Weaknesses:
+    Strengths: I do not know yet. This is my first experience with this type endeavor.
+    Weaknesses: Right now everything. 
     Role:
 
     Name: Finn Erickson
@@ -84,6 +84,13 @@ Canvas
     Person(s) responsible:
 
 (Include all major and secondary roles within the team)
+
+7. Standards of Quality
+
+    Quality Standard 1: (e.g., Timeliness)
+    Quality Standard 2: (e.g., Originality)
+    Quality Standard 3: (e.g., Depth of Research)
+
 
 7. Standards of Quality
 
