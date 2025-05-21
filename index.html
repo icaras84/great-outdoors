@@ -1,30 +1,71 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-<title>Welcome to the Great Outdoors!</title>
-<link rel="stylesheet" type="text/css" href="styles/toplevel.css">
-<script src="scripts/myscripts.js"></script>
-
+    <meta charset="UTF-8">
+    <title>The Great Outdoors</title>
 </head>
-
 <body>
+    <!-- Top Header Navigation -->
+    <header>
+        <nav>
+            <a href="announcement.html">Announcements</a> |
+            <a href="blog.html">Blog</a> |
+            <a href="events.html">Events</a> |
+            <a href="falls.html">See the Falls</a> |
+            <a href="ferry.html">Ride the Ferry</a> |
+            <a href="forest.html"> Wander the Forest</a> |
+            <a href="lake.html">Walk around the Lake</a> |
+            <a href="mountain.html">Climb the Mountain</a> |
+            <a href="park.html">Read in the Park</a>
+        </nav>
+        <hr>
+    </header>
 
-<h1>Welcome to the Great Outdoors!</h1>
+  <section id="announcement">
+        <h2>
+             News and Announcementa
+            <a href="news.html">[View All]</a>
+        </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut ultricies sem.</p>
+    </section>
 
+    <!-- Blog Highlight Section -->
+    <section id="blog-highlights">
+        <h2>
+            Blog Highlights 
+            <a href="blog.html">[View All]</a>
+        </h2>
+        <ul>
+            <li>
+                <a href="blog-post-1.html">Lorem Ipsum Dolor Sit Amet</a> - Brief description here.
+            </li>
+            <li>
+                <a href="blog-post-2.html">Sed Do Eiusmod Tempor</a> - Brief description here.
+            </li>
+        </ul>
+    </section>
 
-<img src = "images/outdoors.jpg" alt="Great Outdoors" onmouseover="showAlt(this)" onmouseout="hideAlt(this)">
-<figcaption>Your Adventure Awaits!</figcaption>
+    <!-- Events Section -->
+    <section id="events">
+        <h2>
+            Upcoming Events 
+            <a href="events.html">[View All]</a>
+        </h2>
+        <ul>
+            <li>
+                <strong>Event Title 1</strong> - Lorem ipsum dolor sit amet. <em>Date: 2025-06-01</em>
+            </li>
+            <li>
+                <strong>Event Title 2</strong> - Consectetur adipiscing elit. <em>Date: 2025-07-15</em>
+            </li>
+        </ul>
+    </section>
 
-<p id="alttext" style="font-size:50px"> <p>
-
-<ul>
-<li><a href="mountain.html">Climb the Mountain</a></li>
-<li><a href="forest.html">Wander the Forest</a></li>
-<li><a href="falls.html">See the Falls</a></li>
-<li><a href="ferry.html">Ride the Ferry</a></li>
-<li><a href="lake.html">Walk Around the Lake</a></li>
-<li><a href="park.html">Read in the Park</a></li>
-</ul>
-
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>For inquiries, please email: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>Or visit our <a href="contact.html">Contact Page</a>.</p>
+    </section>
 </body>
 </html>
