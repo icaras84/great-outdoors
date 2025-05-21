@@ -1,0 +1,25 @@
+{
+  "announcementList" : [
+    {
+      "title" : "Bison herd stops traffic as it crosses road in Yellowstone",
+      "timestamp" : "Apr 24, 2025",
+      "content" : "After the hunting of bison drove it to near extinction..."
+    },
+    {
+      "title" : "Washington salmon fishing opportunities are set for 2025-26",
+      "timestamp" : "April 15, 2025",
+      "content" : "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "title" : "WA lawmakers approve $1.1B for salmon habitat restoration",
+      "timestamp" : "May 5, 2025",
+      "content" : "Washington lawmakers have recently approved a $1.1B budget for salmon habitat restoration. This is a big leap forward in nature preservation..."
+    }
+  ],
+
+  "sources" : [
+    "https://www.cbsnews.com/video/bison-herd-stops-traffic-as-it-crosses-road-in-yellowstone/",
+    "https://wdfw.wa.gov/newsroom/news-release/washington-salmon-fishing-seasons-tentatively-set-2025-2026",
+    "https://www.seattletimes.com/seattle-news/times-watchdog/wa-lawmakers-approve-1-1b-for-salmon-habitat-restoration/"
+  ]
+}
