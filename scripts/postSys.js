@@ -1,3 +1,4 @@
+// A class that contains what the post entails plus a method to create the HTML for it
 class GO_PostContent {
     title;
     timestamp;
