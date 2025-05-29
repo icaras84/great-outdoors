@@ -22,13 +22,13 @@ class GO_PostContent {
 
 
         let topElement = document.createElement("p");
-        topElement.className = output.className + "-top";
+        topElement.className = output.className + "-spacer";
 
         let middleElement = document.createElement("p");
-        middleElement.className = output.className + "-middle";
+        middleElement.className = output.className + "-spacer";
 
         let bottomElement = document.createElement("p");
-        bottomElement.className = output.className + "-bottom";
+        bottomElement.className = output.className + "-spacer";
 
 
         let titleElement = document.createElement("strong");
