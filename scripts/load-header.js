@@ -1,6 +1,7 @@
 // js/load-header.js
 fetch('/header.txt')
   .then(r => r.text())
-  .then(html => {
-    document.getElementById('site-header').innerHTML = html;
+  .then(txt => {
+      let header = document.getElementById('site-header');
+      header.innerHTML = txt;
   });
