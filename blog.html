@@ -12,6 +12,22 @@
     <h2>Blog</h2>
     <ul id="blog-feed"></ul>
   </section>
+  <script>
+    (function() {
+      const realFetch = window.fetch;
+      window.fetch = function(resource, init) {
+        if (typeof resource === 'string'
+            && resource.match(/(^|\/)json\/blogTest\d+\.json$/)
+        ) {
+          resource = resource.replace(
+            /(^|\/)json\/(blogTest\d+\.json)$/,
+            './json/blogs/test/$2'
+          );
+        }
+        return realFetch.call(this, resource, init);
+      };
+    })();
+  </script>
   <script src="./scripts/postSys.js"></script>
   <script src="./scripts/blog.js"></script>
 </body>
