@@ -71,6 +71,7 @@ class GO_PostModel {
     postBuilder = new GO_PostBuilder();
 
     constructor(postBuilder, loadedPosts, jsonArrayVarName) {
+        this.postBuilder = postBuilder;
         this.loadedPosts = loadedPosts;
         this.jsonArrayVarName = jsonArrayVarName;
     }
