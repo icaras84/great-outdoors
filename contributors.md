@@ -1,6 +1,6 @@
-Kirro Burrows (Kirrosaki) \
-Frank (Phranktastic) \
-William Phomphakdee (icaras84) 
+*Kirro Burrows* (**Kirrosaki**) \
+*Frank* (**Phranktastic**) \
+*William Phomphakdee* (**icaras84**) 
 
 
 Team Charter Template (with User Stories)
@@ -9,13 +9,13 @@ Team Charter Template (with User Stories)
     Project Name: The Great Outdoors Website
     Project Description: Create a website where all 
   
-    Project Timeline: (TBD)
-Interview client (05/15/2025)  
+    Project Timeline: June 13, 2025
 
-    Project Goals: (TBD)
-        Goal 1:
-        Goal 2:
-        Goal 3:
+    Project Goals: \
+        - Goal 1: Get the basic site working \
+        - Goal 2: Meet client expectations \
+        - Goal 3: Learn
+
 
 2. Team Members
 
@@ -47,7 +47,6 @@ Interview client (05/15/2025)
     Value 3: Using this opportunity to learn about stuff
     Value 4: Well-documented project
 
-(Discuss and finalize the top 4-5 values you agree on)
 
 4. Group Norms
 
@@ -59,11 +58,13 @@ Canvas
     Work Style Preferences: How does each person prefer to work? (e.g., quiet time, collaborative sessions)
     Feedback and Conflict Resolution: How will we give feedback and resolve disagreements?
 
+
 5. Metrics of Success
 
-    Success Metric 1:
+    Success Metric 1: Learned something
     Success Metric 2:
     Success Metric 3:
+
 
 6. Roles and Responsibilities
 
@@ -79,7 +80,6 @@ Canvas
     Responsibilities: To test and ensure website works according to design and client needs
     Person(s) responsible:
 
-(Include all major and secondary roles within the team)
 
 7. Standards of Quality
 
@@ -88,7 +88,7 @@ Canvas
     Quality Standard 3: (e.g., Depth of Research)
 
 
-7. Standards of Quality
+8. Standards of Quality
 
     Quality Standard 1: (e.g., Timeliness)
     Quality Standard 2: (e.g., Originality)
