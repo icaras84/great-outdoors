@@ -20,7 +20,7 @@
   "announcementList" : [
     {
       "title" : "Server down for maintenance.",
-      "timestamp" : "[Jan 01, 0000] to [Dec 31, 9999]",
+      "timestamp" : "Jan 01, 0000",
       "content" : "Server is down for maintenance. Site improvements will be made."
     }
   ],
