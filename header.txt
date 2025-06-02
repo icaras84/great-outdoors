@@ -11,6 +11,7 @@
     <a href="lake.html">Walk around the Lake</a> |
     <a href="mountain.html">Climb the Mountain</a> |
     <a href="park.html">Read in the Park</a>
+    <a href="contact.html">Contact Us</a>
   </nav>
   <hr>
 </header>
