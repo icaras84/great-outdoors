@@ -3,23 +3,23 @@
 <nav class="site-nav">
   <div class="nav-links">
       <a href="index.html">Home</a> |
-      <a href="news.html">Announcements and News</a> |
+      <a href="news.html">Announcements</a> |
       <a href="blog.html">Blog</a> |
       <a href="events.html">Events</a> |
-      <a href="falls.html">See the Falls</a> |
-      <a href="ferry.html">Ride the Ferry</a> |
-      <a href="forest.html">Wander the Forest</a> |
-      <a href="lake.html">Walk around the Lake</a> |
-      <a href="mountain.html">Climb the Mountain</a> |
-      <a href="park.html">Read in the Park</a> |
+      <a href="falls.html">Falls</a> |
+      <a href="ferry.html">Ferry</a> |
+      <a href="forest.html">Forest</a> |
+      <a href="lake.html">Lakes</a> |
+      <a href="mountain.html">Mountain</a> |
+      <a href="park.html">Parks</a> |
       <a href="contact.html">Contact Us</a>
     </div>
 
      <!-- This form submits to the backend, replace with /search -->
-    <form action="/search" method="GET" style="margin-left: auto;">
-      <input type="text" name="q" placeholder="Search..." required>
-      <button type="submit">Go</button>
-    </form>
+   <form action="/search" method="GET">
+    <input type="text" name="q" placeholder="Search..." required>
+    <button type="submit">Go</button>
+  </form>
   </nav>
   <hr>
 </header>
