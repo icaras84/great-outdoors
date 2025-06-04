@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+  <nav>
+    <a href="index.html">← Back to Home</a>
+  </nav>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mnqkzvpb" method="POST">
+      <label>
+        Name:<br>
+        <input type="text" name="name" required>
+      </label><br><br>
+
+      <label>
+        Email:<br>
+        <input type="email" name="_replyto" required>
+      </label><br><br>
+
+      <label>
+        Message:<br>
+        <textarea name="message" rows="5" required></textarea>
+      </label><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</body>
+</html>

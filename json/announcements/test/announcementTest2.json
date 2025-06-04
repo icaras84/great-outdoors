@@ -1,5 +1,5 @@
 {
-  "announcementList" : [
+  "newsList" : [
     {
       "title" : "Bison herd stops traffic as it crosses road in Yellowstone",
       "timestamp" : "Apr 24, 2025",
@@ -14,6 +14,14 @@
       "title" : "WA lawmakers approve $1.1B for salmon habitat restoration",
       "timestamp" : "May 5, 2025",
       "content" : "Washington lawmakers have recently approved a $1.1B budget for salmon habitat restoration. This is a big leap forward in nature preservation..."
+    }
+  ],
+
+  "announcementList" : [
+    {
+      "title" : "Server down for maintenance.",
+      "timestamp" : "Jan 01, 0000",
+      "content" : "Server is down for maintenance. Site improvements will be made."
     }
   ],
 

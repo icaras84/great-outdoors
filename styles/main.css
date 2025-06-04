@@ -1,0 +1,27 @@
+body {
+  background-color: #f6f8f6; /* light background */
+  color: #4b4b3f; /* main text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3 {
+  color: #7a8b66; /* heading green */
+  font-weight: 700;
+}
+
+a {
+  color: #4b4b3f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #7a8b66;
+}
+
+img {
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+

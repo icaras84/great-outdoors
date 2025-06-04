@@ -1,0 +1,16 @@
+{
+  "eventsList" : [
+    {
+      "title" : "Event 1",
+      "timestamp" : "July 4, 2025",
+      "content" : "Celebration of July 4th at Carkeek Park",
+      "locationLink" : "https://maps.app.goo.gl/rUyYv65TsLefWsky5"
+    },
+    {
+      "title" : "Event 2",
+      "timestamp" : "July 21, 2026",
+      "content" : "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "locationLink": "https://maps.app.goo.gl/jJY8KoZQq1A5eNPx5"
+    }
+  ]
+}

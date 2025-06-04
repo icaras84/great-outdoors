@@ -1,0 +1,31 @@
+{
+  "blogList" : [
+    {
+      "title" : "Blog 1",
+      "timestamp" : "2025-05-20",
+      "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "replies" : [
+        {
+          "title" : "Nested 1",
+          "timestamp" : "2025-05-20",
+          "content" : "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "replies" : [
+            {
+              "title" : "Nested 1 1",
+              "timestamp" : "2025-05-21",
+              "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "replies" : []
+            }
+          ]
+        },
+
+        {
+          "title" : "Nested 2",
+          "timestamp" : "2025-05-23",
+          "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "replies" : []
+        }
+      ]
+    }
+  ]
+}

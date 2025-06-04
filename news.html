@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Announcements</title>
+    <link rel="stylesheet" href="styles/main.css"/>
 </head>
 <body>
     <nav>
@@ -13,6 +14,19 @@
         <h1>Announcements</h1>
        <ul id="announcement-feed"></ul>
     </section>
+
+    <section id="news">
+        <h1>News</h1>
+        <ul id="news-feed"></ul>
+    </section>
+
+    <script src="./scripts/postSys.js"></script>
     <script src="./scripts/announcements.js"></script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    debugTestAnnouncements(2); // or 2, 3, etc., depending on your file
+      });
+    </script>
+
 </body>
 </html>

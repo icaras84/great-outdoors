@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>events</title>
+  <link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body> 
+  <nav>
+    <a href="index.html"> back to homepage</a>
+  </nav>
+  <section id="events">
+    <h2>Events</h2>
+    <ul id="events-feed"></ul>
+  </section>
+  <script src="./scripts/postSys.js"></script>
+  <script src="./scripts/events.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    debugTestEventsPost(1); // or whatever file number exists
+    });
+  </script>
+
+</body>
+</html>
