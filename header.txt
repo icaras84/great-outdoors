@@ -1,5 +1,7 @@
 <!-- header.html -->
 <header>
+<link rel="stylesheet" href="header.css">
+
 <nav class="site-nav">
   <div class="nav-links">
       <a href="index.html">Home</a> |
