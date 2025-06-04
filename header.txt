@@ -1,17 +1,25 @@
 <!-- header.html -->
 <header>
-  <nav class="site-nav">
-    <a href="index.html">Home</a> |
-    <a href="news.html">Announcements and News</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="events.html">Events</a> |
-    <a href="falls.html">See the Falls</a> |
-    <a href="ferry.html">Ride the Ferry</a> |
-    <a href="forest.html">Wander the Forest</a> |
-    <a href="lake.html">Walk around the Lake</a> |
-    <a href="mountain.html">Climb the Mountain</a> |
-    <a href="park.html">Read in the Park</a>
-    <a href="contact.html">Contact Us</a>
+  <nav class="site-nav" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="nav-links">
+      <a href="index.html">Home</a> |
+      <a href="news.html">Announcements and News</a> |
+      <a href="blog.html">Blog</a> |
+      <a href="events.html">Events</a> |
+      <a href="falls.html">See the Falls</a> |
+      <a href="ferry.html">Ride the Ferry</a> |
+      <a href="forest.html">Wander the Forest</a> |
+      <a href="lake.html">Walk around the Lake</a> |
+      <a href="mountain.html">Climb the Mountain</a> |
+      <a href="park.html">Read in the Park</a> |
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+     <!-- This form submits to the backend, replace with /search -->
+    <form action="/search" method="GET" style="margin-left: auto;">
+      <input type="text" name="q" placeholder="Search..." required>
+      <button type="submit">Go</button>
+    </form>
   </nav>
   <hr>
 </header>
