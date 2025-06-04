@@ -1,7 +1,7 @@
 <!-- header.html -->
 <header>
-  <nav class="site-nav" style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="nav-links">
+<nav class="site-nav">
+  <div class="nav-links">
       <a href="index.html">Home</a> |
       <a href="news.html">Announcements and News</a> |
       <a href="blog.html">Blog</a> |
