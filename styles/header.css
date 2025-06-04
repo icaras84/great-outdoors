@@ -3,24 +3,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* wrap on small screens */
-  padding: 1rem;
-  background-color: #f8f8f8;
-  border-bottom: 2px solid #ddd;
+  flex-wrap: nowrap;
+  padding: 1rem 2rem;
+  background-color: #e8f0e8; 
+  border-bottom: 4px solid #a0a080; 
+  box-shadow: 0 4px 6px rgba(75, 75, 63, 0.1);
 }
 
 /* Left links container */
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  flex-grow: 1;
 }
 
 /* Style individual links */
 .nav-links a {
-  text-decoration: none;
-  color: #333;
+ text-decoration: none;
+  color: #4b4b3f; 
   font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #7a8b66; 
 }
 
 /* Search form styling */
@@ -32,21 +39,26 @@
 /* Input box */
 .site-nav input[type="text"] {
   padding: 0.4rem 0.6rem;
-  border: 1px solid #ccc;
+  border: 1px solid #a0a080;
   border-radius: 4px;
   font-size: 1rem;
+  outline: none;
+  background-color: #f6f8f6;
+  color: #4b4b3f;
 }
 
 /* Button */
 .site-nav button {
   padding: 0.4rem 1rem;
-  background-color: #4682b4;
-  color: white;
+  background-color: #7a8b66; 
+  color: #f6f8f6; 
   border: none;
   border-radius: 4px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .site-nav button:hover {
-  background-color: #315f7c;
+  background-color: #5c6b49;
 }
