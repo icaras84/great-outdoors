@@ -12,6 +12,7 @@
       <a href="lake.html">Lakes</a> |
       <a href="mountain.html">Mountain</a> |
       <a href="park.html">Parks</a> |
+      <a href="hiking.html">Hiking</a> |
       <a href="contact.html">Contact Us</a>
     </div>
 
