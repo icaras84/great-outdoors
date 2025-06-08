@@ -1,8 +1,8 @@
 // A class that contains what the post entails plus a method to create the HTML for it
 class GO_PostContent {
-    title;
-    timestamp;
-    content;
+    title ="";
+    timestamp = Date.now().toString();
+    content = "";
 
     constructor(title, timestamp, content) {
         this.title = title;
@@ -16,9 +16,11 @@ class GO_PostContent {
     }
 
     // formats the content into a valid HTML structure
-    toHTML(parentId){
+    toHTML(parentId, idx){
         let output = document.createElement("div");
         output.className = parentId + "-item";
+        output.id = `${idx}/`;
+        console.log(`class: ${output.className} id: ${output.id}`);
 
 
         let topElement = document.createElement("p");
@@ -81,7 +83,7 @@ class GO_PostModel {
     }
 
     removePost(post){
-        this.loadedPosts = this.loadedPosts.filter(post => post.id !== post.id);
+        this.loadedPosts = this.loadedPosts.filter(postIn => postIn.id !== post.id);
     }
 
     removePoseOnIndices(indices){
@@ -108,15 +110,61 @@ class GO_PostView {
     pasteOntoHTML(posts){
         let postListHTMLParent = document.getElementById(this.htmlIDToLookup);
         postListHTMLParent.innerHTML = "";
-        posts.forEach(post =>
-            postListHTMLParent.appendChild(post.toHTML(this.htmlIDToLookup))
-        );
+
+        for (let idx = 0; idx < posts.length; idx++) {
+            postListHTMLParent.appendChild(posts[idx].toHTML(this.htmlIDToLookup, idx));
+        }
     }
 }
 
-class SearchQuery {
+class GO_DateRange {
+    _beginDate;
+    _endDate;
+    _mode = "SINGLE";
+
+    _beginTime;
+    _endTime;
+
+
+    constructor(beginDate, endDate) {
+        this._beginDate = beginDate;
+        this._endDate = endDate;
+        this._beginTime = beginDate.getTime();
+        this._endTime = endDate.getTime();
+    }
+
+    singleDateMode(){
+        this._mode = "SINGLE";
+        this._beginTime = this._beginDate.getTime();
+        this._endTime = this._beginDate.getTime();
+    }
+
+    rangeDateMode(){
+        this._mode = "RANGE";
+        this._beginTime = this._beginDate.getTime();
+        this._endTime = this._endDate.getTime();
+    }
+
+    setLowerDate(date){
+        this._beginDate = date;
+    }
+
+    setUpperDate(date){
+        this._endDate = date;
+    }
+
+    scoreTime(timestamp){
+        let postTime = Date.parse(timestamp);
+        let lowerTimestampScore = postTime - this._beginTime;
+        let upperTimestampScore = this._endTime - postTime;
+
+        return [lowerTimestampScore, upperTimestampScore];
+    }
+}
+
+class GO_SearchQuery {
     titleRegex = new RegExp('', 'g');
-    timestampFilter = [new Date(), new Date()];
+    timestampFilter = new GO_DateRange(new Date(), new Date());
     contentRegex = new RegExp('', 'g');
 
     targetTitle = true;
@@ -153,10 +201,9 @@ class SearchQuery {
         }
 
         // boundary checking for time ranges
-        let lowerTimestampScore = Date.parse(post.timestamp) - this.timestampFilter[0].getTime();
-        let upperTimestampScore = this.timestampFilter[1].getTime() - Date.parse(post.timestamp);
+        let timestampScore = this.timestampFilter.scoreTime(post.timestamp);
 
-        return [titleScore, contentScore, lowerTimestampScore, upperTimestampScore];
+        return [titleScore, contentScore, timestampScore[0], timestampScore[1]];
     }
 
     filterFunc(post){
@@ -184,7 +231,7 @@ class GO_PostSystem {
     postBuilder = new GO_PostBuilder();
     postView = new GO_PostView();
 
-    searchQuery = new SearchQuery();
+    searchQuery = new GO_SearchQuery();
     intermediatePosts = [];
 
     constructor(postBuilder, htmlIDToLookup, jsonArrayVarName){
@@ -229,3 +276,4 @@ window.GO_PostBuilder = GO_PostBuilder;
 window.GO_PostView = GO_PostView;
 window.GO_PostModel = GO_PostModel;
 window.GO_PostSystem = GO_PostSystem;
+window.GO_SearchQuery = GO_SearchQuery;

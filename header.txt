@@ -17,7 +17,7 @@
     </div>
 
      <!-- This form submits to the backend, replace with /search -->
-   <form action="/search" method="GET">
+   <form onSubmit=search($event)>
     <input type="text" name="q" placeholder="Search..." required>
     <button type="submit">Go</button>
   </form>

@@ -11,21 +11,24 @@
     <header id="site-header"></header>
 
     <!-- Hiking Section -->
-    <section id="events">
+    <section id="hiking">
         <h2>
-            Upcoming Hikes 
+            Hikes Trails
           </h2>
         <ul id="hiking-feed">
-            <li>
-                <strong>Event Title 1</strong> - Lorem ipsum dolor sit amet. <em>Date: 2025-06-01</em>
-            </li>
-            <li>
-                <strong>Event Title 2</strong> - Consectetur adipiscing elit. <em>Date: 2025-07-15</em>
-            </li>
+
         </ul>
     </section>
 
     <!--Loader Script for the Header -->
-  <script src="scripts/load-header.js" defer></script>
+    <script src="scripts/load-header.js" defer></script>
+    <script src="./scripts/postSys.js"></script>
+    <script src="scripts/hiking.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            debugTestHikingTrails(1); // or whatever file number exists
+        });
+    </script>
 </body>
 </html>
