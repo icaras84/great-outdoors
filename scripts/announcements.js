@@ -35,3 +35,25 @@ function debugTestAnnouncements(idx){
             console.error('Error fetching JSON:', error);
         });
 }
+
+
+window.GO_HeaderLoaded.pushSubscribers([
+    () => {
+        let searchForm = document.getElementById('searchForm');
+        let searchbar = document.getElementById('searchbar');
+        searchForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            let searchIn = searchbar.value;
+            let searchQuery = new GO_SearchQuery();
+            searchQuery.titleRegex = new RegExp(searchIn, 'g');
+            searchQuery.contentRegex = new RegExp(searchIn, 'g');
+
+            announcementSys.searchQuery = searchQuery;
+            announcementSys.refreshPostsOntoHTML();
+
+            newsSys.searchQuery = searchQuery;
+            newsSys.refreshPostsOntoHTML();
+        })
+    }
+]);

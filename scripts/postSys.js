@@ -57,16 +57,20 @@ class GO_PostContent {
     }
 }
 
+// builder interprets a json and builds a model of the post
 class GO_PostBuilder {
+    // accepts a json obj and parses a post (main method to override for a custom builder with custom json)
     fromJsonObject(jsonObject) {
         return new GO_PostContent(jsonObject.title, jsonObject.timestamp, jsonObject.content);
     }
 
+    // accepts a json string and parses a post
     fromJsonString(jsonString) {
         return this.fromJsonObject(JSON.parse(jsonString));
     }
 }
 
+// a class to represent all the loaded posts and what the class should look for when parsing a json object to get the array of posts
 class GO_PostModel {
     loadedPosts = []
     jsonArrayVarName = "";
@@ -100,6 +104,7 @@ class GO_PostModel {
     }
 }
 
+// a class to control where the post is shown in the HTML
 class GO_PostView {
     htmlIDToLookup = "";
 
@@ -117,6 +122,7 @@ class GO_PostView {
     }
 }
 
+// a class to store a date interval
 class GO_DateRange {
     _beginDate;
     _endDate;
@@ -162,6 +168,7 @@ class GO_DateRange {
     }
 }
 
+// a class to store the regex required to complete a search
 class GO_SearchQuery {
     titleRegex = new RegExp('', 'g');
     timestampFilter = new GO_DateRange(new Date(), new Date());
@@ -180,6 +187,7 @@ class GO_SearchQuery {
         this.titleRegex = regex;
     }
 
+    // scoring function attributes a value to each post that is based on the number of matches within the post
     scoringFunc(post){
         // get title matches based on regex
         let titleRegexResult = post.title.matchAll(this.titleRegex);
@@ -206,6 +214,7 @@ class GO_SearchQuery {
         return [titleScore, contentScore, timestampScore[0], timestampScore[1]];
     }
 
+    // filter out posts that do and don't match the criterion
     filterFunc(post){
         let scores = this.scoringFunc(post);
         let titleResult = this.targetTitle ? scores[0] > 0 : true;
@@ -214,6 +223,7 @@ class GO_SearchQuery {
         return titleResult && contentResult && timestampResult;
     }
 
+    // sorting function to dictate order of which posts are shown in via score value
     compareFunc(postA, postB){
         let scoreA = this.scoringFunc(postA);
         let scoreB = this.scoringFunc(postB);
@@ -226,6 +236,7 @@ class GO_SearchQuery {
     }
 }
 
+// a class that acts as the controller for the model and view components (resulting in the MVC pattern)
 class GO_PostSystem {
     postModel = new GO_PostModel();
     postBuilder = new GO_PostBuilder();
@@ -253,23 +264,26 @@ class GO_PostSystem {
         this.postModel.removePoseOnIndices(indices);
     }
 
+    // filters and then sorts the intermediate posts (that should be rendered)
     filterPosts(searchQuery){
         this.intermediatePosts = this.postModel.loadedPosts.filter(post => searchQuery.filterFunc(post));
         this.intermediatePosts.sort((a, b) => this.searchQuery.compareFunc(a, b));
     }
 
+    // render intermediate posts unto the page dictated by the view
     refreshPostsOntoHTML(){
         this.filterPosts(this.searchQuery)
         this.postView.pasteOntoHTML(this.intermediatePosts);
     }
 
+    // wrapper method for loading the model from a json obj
     loadFromJson(jsonObj){
         this.postModel.loadFromJson(jsonObj);
     }
 }
 
 
-//export {PostContent, PostBuilder, PostModel, PostView, PostSystem};
+// bind the classes declared here to the window so they're in global scope instead of being file-specific
 window.GO_PostContent = GO_PostContent;
 window.GO_PostBuilder = GO_PostBuilder;
 

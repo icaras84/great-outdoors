@@ -16,15 +16,16 @@
     <h2>Blog</h2>
     <ul id="blog-feed"></ul>
   </section>
-  <script src="./scripts/postSys.js"></script>
-  <script src="./scripts/blog.js"></script>
+   <!--Loader Script for the Header -->
+   <script src="scripts/load-header.js" defer></script>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    debugTestBlog(1); // or whatever number matches your file
-  });
-</script>
-    <!--Loader Script for the Header -->
-  <script src="scripts/load-header.js" defer></script>
+   <script src="./scripts/postSys.js"></script>
+   <script src="./scripts/blog.js"></script>
+   <script>
+     document.addEventListener("DOMContentLoaded", function() {
+       debugTestBlog(1); // or whatever number matches your file
+     });
+   </script>
+
 </body>
 </html>
