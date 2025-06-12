@@ -1,0 +1,50 @@
+#contact {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #e8f0e8; /* soft green background */
+  border: 1px solid #a0a080;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(75, 75, 63, 0.1);
+}
+
+#contact h2 {
+  text-align: center;
+  color: #5c6b49;
+  margin-bottom: 1.5rem;
+}
+
+#contact label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #4b4b3f;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #a0a080;
+  border-radius: 4px;
+  background-color: #f6f8f6;
+  color: #4b4b3f;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+#contact button {
+  background-color: #7a8b66;
+  color: #f6f8f6;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+#contact button:hover {
+  background-color: #5c6b49;
+}

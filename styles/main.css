@@ -25,3 +25,64 @@ img {
   margin: 0 auto;
 }
 
+.map-image {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.map-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #a0a080;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(75, 75, 63, 0.15);
+}
+
+.map-image figcaption {
+  font-size: 0.9rem;
+  color: #5c6b49;
+  margin-top: 0.5rem;
+}
+
+/* Section styling */
+section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background-color: #f6f8f6;
+  border: 1px solid #a0a080;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(75, 75, 63, 0.05);
+}
+
+/* Header images for each section */
+.section-banner {
+  width: 1000px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(75, 75, 63, 0.1);
+}
+
+/* Headings */
+section h2 {
+  color: #5c6b49;
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section h2 a {
+  font-size: 0.9rem;
+  color: #4b4b3f;
+  text-decoration: underline;
+  margin-left: 1rem;
+}
+
+section h2 a:hover {
+  color: #315f7c;
+}
