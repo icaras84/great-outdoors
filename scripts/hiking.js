@@ -1,5 +1,4 @@
-
-class EventPost extends GO_PostContent{
+class HikingTrailItem extends GO_PostContent{
     locationLink;
 
 
@@ -14,7 +13,7 @@ class EventPost extends GO_PostContent{
 
 
     toHTML(parentId, idx) {
-        let output = super.toHTML(parentId);
+        let output = super.toHTML(parentId, idx);
 
         let destinationLinkSpacer = document.createElement("p");
         destinationLinkSpacer.className = output.className + "-spacer";
@@ -31,29 +30,28 @@ class EventPost extends GO_PostContent{
     }
 }
 
-class EventPostBuilder extends GO_PostBuilder{
+class HikingTrailBuilder extends GO_PostBuilder{
     fromJsonObject(jsonObject) {
-        return new EventPost(jsonObject.title, jsonObject.timestamp, jsonObject.content, jsonObject.locationLink);
+        return new HikingTrailItem(jsonObject.title, jsonObject.timestamp, jsonObject.content, jsonObject.link);
     }
 }
 
-let eventsBuilder = new EventPostBuilder();
-let eventSys = new GO_PostSystem(eventsBuilder, "events-feed", "eventsList");
+let hikingTrailBuilder = new HikingTrailBuilder();
+let hikingSys = new GO_PostSystem(hikingTrailBuilder, "hiking-feed", "hikingLocations");
 
 // debug function to load a JSON file of announcements by fetch request
-function debugTestEventsPost(idx){
-    fetch(`./json/events/test/eventTest${idx}.json`)
+function debugTestHikingTrails(idx){
+    fetch(`./json/hiking/test/hikingTest${idx}.json`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            eventSys.loadFromJson(data);
-            eventSys.refreshPostsOntoHTML();
+            hikingSys.loadFromJson(data);
+            hikingSys.refreshPostsOntoHTML();
         })
         .catch(error => {
             console.error('Error fetching JSON:', error);
         });
 }
-
 window.GO_HeaderLoaded.pushSubscribers([
     () => {
         let searchForm = document.getElementById('searchForm');

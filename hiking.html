@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Great Outdoors</title>
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="stylesheet" href="styles/header.css"/>
+</head>
+<body>
+    <!-- Top Header Navigation -->
+    <header id="site-header"></header>
+
+    <!-- Hiking Section -->
+    <section id="hiking">
+        <h2>
+            Hikes Trails
+          </h2>
+        <ul id="hiking-feed">
+
+        </ul>
+    </section>
+
+    <!--Loader Script for the Header -->
+    <script src="scripts/load-header.js" defer></script>
+    <script src="./scripts/postSys.js"></script>
+    <script src="scripts/hiking.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            debugTestHikingTrails(1); // or whatever file number exists
+        });
+    </script>
+</body>
+</html>

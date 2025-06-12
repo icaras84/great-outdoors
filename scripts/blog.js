@@ -8,19 +8,21 @@ class BlogPost extends GO_PostContent{
         this.replies = replies;
     }
 
-
     toJson() {
         return JSON.stringify(this);
     }
 
-
-    toHTML(parentId) {
-        let output = super.toHTML(parentId);
+    toHTML(parentId, idx) {
+        let output = super.toHTML(parentId, idx);
         let replySection = document.createElement("ul");
         replySection.className = output.className + "-replies";
-        this.replies.forEach(reply => {
-            replySection.appendChild(reply.toHTML(parentId));
-        })
+
+        for (let i = 0; i < this.replies.length; i++) {
+            let replyHtml = this.replies[i].toHTML(parentId, i);
+            replyHtml.id = output.id + replyHtml.id;
+            replySection.appendChild(replyHtml);
+        }
+
         output.appendChild(replySection);
         return output;
     }
@@ -39,6 +41,11 @@ class BlogPostBuilder extends GO_PostBuilder{
 
 let blogPostBuilder = new BlogPostBuilder();
 let blogSys = new GO_PostSystem(blogPostBuilder, "blog-feed", "blogList");
+
+let defSearch = new GO_SearchQuery();
+defSearch.ascendingTimestampScore = false;
+
+blogSys.searchQuery = defSearch;
 
 // debug function to load a JSON file of announcements by fetch request
 function debugTestBlog(idx){

@@ -5,17 +5,17 @@ body {
 }
 
 h1, h2, h3 {
-  color: #7a8b66; /* heading green */
+  color: #5c6b49;
   font-weight: 700;
 }
 
 a {
   color: #4b4b3f;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
-  color: #7a8b66;
+  color: #c94f1d;
 }
 
 img {
