@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="styles/main.css"/>
+  <link rel="stylesheet" href="styles/header.css"/>
+</head>
+<body> 
+   <!-- Top Header Navigation -->
+    <header id="site-header"></header>
+  <section id="blog">
+    <h2>Blog</h2>
+    <ul id="blog-feed"></ul>
+  </section>
+   <!--Loader Script for the Header -->
+   <script src="scripts/load-header.js"></script>
+
+   <script src="./scripts/postSys.js"></script>
+   <script src="./scripts/blog.js"></script>
+   <script>
+     document.addEventListener("DOMContentLoaded", function() {
+       debugTestBlog(1); // or whatever number matches your file
+     });
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "announcementList" : [
+    {
+      "title" : "Announcement 1",
+      "timestamp" : "2025-05-20",
+      "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    {
+      "title" : "Announcement 2",
+      "timestamp" : "2025-05-15",
+      "content" : "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "title" : "Announcement 3",
+      "timestamp" : "2025-05-01",
+      "content" : "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+    }
+  ]
+}

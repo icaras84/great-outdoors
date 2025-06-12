@@ -1,0 +1,35 @@
+{
+  "hikingLocations" : [
+    {
+      "title" : "Mt. Rainier",
+      "timestamp" : "",
+      "content": "Skyline Trail",
+      "link": "https://www.nps.gov/mora/planyourvisit/skyline-trail.htm"
+    },
+    {
+      "title" : "Mt. Rainier",
+      "timestamp" : "",
+      "content": "Sunrise Nature Trail",
+      "link": "https://www.nps.gov/mora/planyourvisit/sunrise.htm"
+    },
+    {
+      "title" : "Mt. Rainier",
+      "timestamp" : "",
+      "content": "Naches Peak Loop Trail",
+      "link": "https://www.nps.gov/mora/planyourvisit/sunrise.htm"
+    },
+    {
+      "title" : "Mt. Rainier",
+      "timestamp" : "",
+      "content": "Mount Fremont Lookout Trail",
+      "link": "https://www.nps.gov/mora/planyourvisit/sunrise.htm"
+    },
+    {
+      "title" : "Mt. Rainier",
+      "timestamp" : "",
+      "content": "Glacier Basin Trail",
+      "link": "https://www.nps.gov/mora/planyourvisit/sunrise.htm"
+    }
+  ]
+
+}

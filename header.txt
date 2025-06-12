@@ -1,0 +1,26 @@
+<!-- header.html -->
+<header>
+<nav class="site-nav">
+  <div class="nav-links">
+      <a href="index.html">Home</a> |
+      <a href="news.html">Announcements</a> |
+      <a href="blog.html">Blog</a> |
+      <a href="events.html">Events</a> |
+      <a href="falls.html">Falls</a> |
+      <a href="ferry.html">Ferry</a> |
+      <a href="forest.html">Forest</a> |
+      <a href="lake.html">Lakes</a> |
+      <a href="mountain.html">Mountain</a> |
+      <a href="park.html">Parks</a> |
+      <a href="hiking.html">Hiking</a> |
+      <a href="contact.html">Contact Us</a>
+    </div>
+
+     <!-- This form submits to the backend, replace with /search -->
+   <form id="searchForm">
+    <input type="text" id="searchbar" name="q" placeholder="Search..." required>
+    <button id="searchSubmit" type="submit">Go</button>
+  </form>
+  </nav>
+  <hr>
+</header>

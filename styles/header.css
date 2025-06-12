@@ -1,0 +1,64 @@
+/* Layout the nav bar */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 1rem 2rem;
+  background-color: #767a5e;
+  border-bottom: 4px solid #a0a080; 
+  box-shadow: 0 4px 6px rgba(75, 75, 63, 0.1);
+}
+
+/* Left links container */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+/* Style individual links */
+.nav-links a {
+ text-decoration: underline;
+  color: #4b4b3f; 
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #c94f1d; 
+}
+
+/* Search form styling */
+.site-nav form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Input box */
+.site-nav input[type="text"] {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #a0a080;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #f6f8f6;
+  color: #4b4b3f;
+}
+
+/* Button */
+.site-nav button {
+  padding: 0.4rem 1rem;
+  background-color: #7a8b66; 
+  color: #f6f8f6; 
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.site-nav button:hover {
+  background-color: #5c6b49;
+}

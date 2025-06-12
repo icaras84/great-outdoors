@@ -1,0 +1,38 @@
+{
+  "blogList" : [
+    {
+      "title" : "Blog 1",
+      "timestamp" : "2025-05-20",
+      "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "replies" : [
+        {
+          "title" : "Nested 1",
+          "timestamp" : "2025-05-20",
+          "content" : "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "replies" : [
+            {
+              "title" : "Nested 1 1",
+              "timestamp" : "2025-05-21",
+              "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "replies" : []
+            }
+          ]
+        },
+
+        {
+          "title" : "Nested 2",
+          "timestamp" : "2025-05-23",
+          "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          "replies" : []
+        }
+      ]
+    },
+
+    {
+      "title" : "Blog 2",
+      "timestamp" : "01-01-0000",
+      "content" : "According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible...",
+      "replies" : []
+    }
+  ]
+}
