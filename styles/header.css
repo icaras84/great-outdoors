@@ -5,7 +5,7 @@
   align-items: center;
   flex-wrap: nowrap;
   padding: 1rem 2rem;
-  background-color: #e8f0e8; 
+  background-color:  #5c6b49;
   border-bottom: 4px solid #a0a080; 
   box-shadow: 0 4px 6px rgba(75, 75, 63, 0.1);
 }
@@ -20,14 +20,14 @@
 
 /* Style individual links */
 .nav-links a {
- text-decoration: none;
+ text-decoration: underline;
   color: #4b4b3f; 
   font-weight: bold;
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #7a8b66; 
+  color: #c94f1d; 
 }
 
 /* Search form styling */
