@@ -64,8 +64,8 @@ window.GO_HeaderLoaded.pushSubscribers([
             searchQuery.titleRegex = new RegExp(searchIn, 'g');
             searchQuery.contentRegex = new RegExp(searchIn, 'g');
 
-            eventSys.searchQuery = searchQuery;
-            eventSys.refreshPostsOntoHTML();
+            hikingSys.searchQuery = searchQuery;
+            hikingSys.refreshPostsOntoHTML();
         })
     }
 ]);

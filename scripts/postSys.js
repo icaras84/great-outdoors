@@ -185,6 +185,7 @@ class GO_SearchQuery {
 
     constructor(regex) {
         this.titleRegex = regex;
+        this.contentRegex = regex;
     }
 
     // scoring function attributes a value to each post that is based on the number of matches within the post
@@ -199,12 +200,13 @@ class GO_SearchQuery {
         let contentScore = 0;
 
         // count the length of title matches
-        for (const titleMatch of titleRegexResult) {
+        for (let titleMatch of titleRegexResult) {
             titleScore++;
         }
+        console.log(titleScore);
 
         // count the length of content matches
-        for (const contentMatch of contentRegexResult) {
+        for (let contentMatch of contentRegexResult) {
             contentScore++;
         }
 
@@ -217,10 +219,13 @@ class GO_SearchQuery {
     // filter out posts that do and don't match the criterion
     filterFunc(post){
         let scores = this.scoringFunc(post);
-        let titleResult = this.targetTitle ? scores[0] > 0 : true;
-        let contentResult = this.targetContent ? scores[1] > 0 : true;
-        let timestampResult = this.targetTimestamp ? (scores[2] > 0 && scores[3] < 0) : true;
-        return titleResult && contentResult && timestampResult;
+
+        console.log(scores);
+
+        let titleResult = this.targetTitle ? scores[0] > 0 : false;
+        let contentResult = this.targetContent ? scores[1] > 0 : false;
+        let timestampResult = this.targetTimestamp ? (scores[2] > 0 && scores[3] < 0) : false;
+        return titleResult || contentResult || timestampResult;
     }
 
     // sorting function to dictate order of which posts are shown in via score value
@@ -242,7 +247,7 @@ class GO_PostSystem {
     postBuilder = new GO_PostBuilder();
     postView = new GO_PostView();
 
-    searchQuery = new GO_SearchQuery();
+    searchQuery = new GO_SearchQuery(new RegExp(' ', 'g'));
     intermediatePosts = [];
 
     constructor(postBuilder, htmlIDToLookup, jsonArrayVarName){
@@ -250,6 +255,9 @@ class GO_PostSystem {
         this.postView = new GO_PostView(htmlIDToLookup);
         this.postModel = new GO_PostModel(this.postBuilder, [], jsonArrayVarName);
         this.intermediatePosts = [];
+
+        this.searchQuery = new GO_SearchQuery();
+        this.searchQuery.titleRegex = new RegExp(' ', 'g');
     }
 
     pushPost(post){
@@ -266,13 +274,15 @@ class GO_PostSystem {
 
     // filters and then sorts the intermediate posts (that should be rendered)
     filterPosts(searchQuery){
+        console.log(this.postModel.loadedPosts);
+        console.log(`search: ${searchQuery.titleRegex}`);
         this.intermediatePosts = this.postModel.loadedPosts.filter(post => searchQuery.filterFunc(post));
         this.intermediatePosts.sort((a, b) => this.searchQuery.compareFunc(a, b));
     }
 
     // render intermediate posts unto the page dictated by the view
     refreshPostsOntoHTML(){
-        this.filterPosts(this.searchQuery)
+        this.filterPosts(this.searchQuery);
         this.postView.pasteOntoHTML(this.intermediatePosts);
     }
 

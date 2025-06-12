@@ -49,6 +49,8 @@ window.GO_HeaderLoaded.pushSubscribers([
             searchQuery.titleRegex = new RegExp(searchIn, 'g');
             searchQuery.contentRegex = new RegExp(searchIn, 'g');
 
+            console.log(searchQuery);
+
             announcementSys.searchQuery = searchQuery;
             announcementSys.refreshPostsOntoHTML();
 
