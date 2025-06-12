@@ -25,3 +25,23 @@ img {
   margin: 0 auto;
 }
 
+.map-image {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.map-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #a0a080;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(75, 75, 63, 0.15);
+}
+
+.map-image figcaption {
+  font-size: 0.9rem;
+  color: #5c6b49;
+  margin-top: 0.5rem;
+}
+
