@@ -39,6 +39,26 @@ img {
   box-shadow: 0 4px 10px rgba(75, 75, 63, 0.15);
 }
 
+.event-image figcaption {
+  font-size: 0.9rem;
+  color: #5c6b49;
+  margin-top: 0.5rem;
+}
+
+.event-image {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.event-image img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #a0a080;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(75, 75, 63, 0.15);
+}
+
 .map-image figcaption {
   font-size: 0.9rem;
   color: #5c6b49;
